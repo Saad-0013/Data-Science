@@ -16,4 +16,5 @@ df.columns
 df.values
 ```
 
-### 
+### Sorting and Subsetting
+
