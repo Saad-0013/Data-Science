@@ -228,7 +228,7 @@ We may encounter certain types of errors when dealing with categorical data.
 - Creating new groups, ```0-20k```, ```20k-40k``` categories from continuous data.
 - Improper mapping: The mapping below is an example of an improper mapping.  
     - 1-5 &rarr; bad 
-    - 5-10 &rarr; neutral<br>
+    - 5-10 &rarr; good<br>
 
 - The above mapping can be improved
     - 1-5 &rarr; bad 
@@ -321,7 +321,7 @@ length = df['phone_number'].ste.len()
 assert length.min() >= 10
 assert df['phone_number'].str.contains("+|-").any() == False
 ```
-<b>The ```.any()``` method</b>
+<b>The ```.any()``` method</b><br>
 The ```.any()``` method returns true if any element of the our output from ```.str.contains()``` is ```True```.
 
 ### Regex
@@ -387,6 +387,8 @@ We can also choose to convert the date to the format of our choice using the fol
 ```python 
 df['date'] = df['date'].dt.strftime("%d-%m-%y")
 ```
+
+### Cross field validation
 
 
 
